@@ -1,0 +1,29 @@
+@import "fonts";
+
+html, body {
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Bebasik, sans-serif;
+  font-size: 16pt;
+  color: @white;
+  background-color: @black;
+  height: 100vh;
+  width: 100%;
+
+  a, a:visited {
+    color: @white;
+    text-decoration: none;
+    transition: color 0.12s;
+
+    &:hover {
+      color: darken(@white,20%);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+#band {
+  grid-area: band;
+}
+
+.band {
+  grid-template-rows: auto 1fr 3fr;
+  grid-template-columns: auto auto;
+  h1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .desc {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 2vw;
+    font-size: 2em;
+  }
+  .milestones {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 2vw 1vw;
+    font-size: 2em;
+    text-align: left;
+    margin-left: 2vw;
+  }
+  .members {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 2vw 1vw;
+    font-size: 2em;
+  }
+  strong {
+    color: @red;
+    text-transform: uppercase;
+  }
+}

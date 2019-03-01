@@ -1,0 +1,78 @@
+#booking {
+  grid-area: booking;
+}
+
+.booking {
+
+  p {
+    font-size: 1.5em;
+    margin: 2em 0;
+  }
+  .form {
+    box-sizing: border-box;
+    padding: 0 30px;
+    text-align: left;
+    font-size: 1.2em;
+
+    form {
+      label {
+        display: block;
+        color: darken(@white, 10%);
+      }
+      textarea {
+        resize: vertical;
+        transition: height 0s !important;
+      }
+      input, textarea {
+        margin-bottom: 15px;
+        padding: 5px;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: bold;
+        outline: none;
+        background-color: @black;
+        border: 0;
+        border-bottom: 2px solid darken(@white,20%);
+        color: darken(@white,20%);
+        transition: all 0.5s ease;
+        width: 100%;
+
+        &.success {
+          border-bottom-color: @green;
+        }
+        &.error {
+          border-bottom-color: @red;
+        }
+
+        &:focus {
+          color: @white;
+          border-bottom-color: @white;
+          background-color: lighten(@black,5%);
+        }
+
+        // &:-webkit-autofill {
+        //   &, &:hover {
+        //     -webkit-box-shadow: 0 0 0 30px @black inset;
+        //     -webkit-text-fill-color: darken(@white,20%) !important;
+        //   }
+        //   &:focus, &:active {
+        //     -webkit-box-shadow: 0 0 0 30px lighten(@black,5%) inset;
+        //     -webkit-text-fill-color: @white !important;
+        //     color: @white !important;
+        //   }
+        // }
+      }
+      input[type=submit] {
+        padding: 10px 30px;
+        width: auto;
+        border: 2px solid darken(@white,20%);
+        &:hover {
+          color: @white;
+          border-bottom-color: @white;
+          background-color: lighten(@black,5%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

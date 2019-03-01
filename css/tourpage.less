@@ -1,0 +1,61 @@
+@import "fonts";
+@import "functions";
+@import "colors";
+@import "basic";
+
+//sections
+@import "header";
+@import "tour";
+
+@sections_order: "tour" "pagination";
+
+body > section > div {
+  min-height: auto;
+  height: auto;
+}
+
+.header {
+  background-color: @black;
+
+  h1 {
+    font-size: 8em;
+    margin: 0.1em 0;
+  }
+}
+
+.tour {
+  .gig-holder {
+    .gig {
+      width: 350px;
+      height: calc(350px/0.71);
+    }
+  }
+}
+
+#pagination {
+  grid-area: pagination;
+  height: 100%;
+}
+
+.pagination {
+  font-size: 1.2em;
+  .info {
+    margin: 1em 0;
+  }
+  .arrows {
+    a {
+      margin: 0 0.5em;
+      &.current {
+        cursor: default;
+        color: @red;
+        font-weight: bold;
+        &:hover {
+          color: @red;
+        }
+      }
+    }
+  }
+  .home {
+    margin: 1em 0;
+  }
+}

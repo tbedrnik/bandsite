@@ -1,0 +1,301 @@
+<h1>%event%</h1>
+<p>
+  <a class="delete">Delete</a> <a class="clone">Clone</a>
+</p>
+<div class="cols">
+  <div class="col">
+    <table id="general-info">
+      <thead>
+        <tr>
+          <th colspan=2>General info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a>Event</a>:</td>
+          <td>%event%</td>
+        </tr>
+        <tr>
+          <td data-date="%sqldate%"><a>Date</a>:</td>
+          <td>%date%</td>
+        </tr>
+        <tr>
+          <td><a>Time</a>:</td>
+          <td>%time%</td>
+        </tr>
+        <tr>
+          <td><a>Venue</a>:</td>
+          <td>%venue%</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="promoter">
+      <thead>
+        <tr>
+          <th colspan=2>Promoter</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Name:</td>
+          <td>%promoter_name%</td>
+        </tr>
+        <tr>
+          <td>Company:</td>
+          <td>%promoter_company%</td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><a href="%emailLink%">%promoter_email%</a></td>
+        </tr>
+        <tr>
+          <td>Phone:</td>
+          <td><a href="tel:%promoter_phone%"></a>%promoter_phone%</td>
+        </tr>
+        <tr>
+          <td colspan=2><a class="changePromoter">Change promoter</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="gig-info">
+      <thead>
+        <tr>
+          <th colspan=2>Gig info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a>Playtime</a>:</td>
+          <td>%playtime%</td>
+        </tr>
+        <tr>
+          <td>Recommended departure:</td>
+          <td>%departure%</td>
+        </tr>
+        <tr>
+          <td>Fuel cost:</td>
+          <td>%cost%</td>
+        </tr>
+        <tr>
+          <td><a>Revenue</a>:</td>
+          <td>%revenue%</td>
+        </tr>
+        <tr>
+          <td>Profit:</td>
+          <td>%profit%</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="social">
+      <thead>
+        <tr>
+          <th colspan="2">Social</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a>Facebook</a>:</td>
+          <td>%facebook%</td>
+        </tr>
+        <tr>
+          <td><a>Web</a>:</td>
+          <td>%web%</td>
+        </tr>
+        <tr>
+          <td><a>Tickets</a>:</td>
+          <td>%tickets%</td>
+        </tr>
+        <tr>
+          <td><a>Public</a>:</td>
+          <td>%public%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <table id="trip-info">
+      <thead>
+        <tr>
+          <th colspan=2>Trip info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a>Address</a>:</td>
+          <td>%address%</td>
+        </tr>
+        <tr>
+          <td colspan=2>
+            <iframe src="%gmapembed%"></iframe>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="notes">
+      <thead>
+        <tr>
+          <th>Notes</th>
+          <th class="notesStatus"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan=2 class="form">
+            <textarea name="notes" rows="10">%notes%</textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <table id="poster">
+      <thead>
+        <tr>
+          <th>Poster</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img src="%poster%" alt="" class="poster" width=450>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a class="changePoster">Change poster</a> <a class="deletePoster">Delete poster</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="modal" id="tour">
+  <div class="modal-body">
+    <div class="body">
+      <h1>Edit gig</h1>
+      <p>
+        You are changing <span class="name"></span>
+      </p>
+      <div class="form">
+        <form method="post">
+          <input type="text" name="value" value="">
+          <input type="hidden" name="what" value="">
+          <input type="hidden" name="id" value="%id%">
+          <input type="submit" name="edit" value="Edit">
+        </form>
+      </div>
+      <span class="close">Close</span>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="public">
+  <div class="modal-body">
+    <div class="body">
+      <h1>Change public</h1>
+      <p></p>
+      <div class="form">
+        <form method="post">
+          <input type="hidden" name="id" value="%id%">
+          <input type="submit" name="public" value="Change">
+        </form>
+      </div>
+      <span class="close">Close</span>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="clone">
+  <div class="modal-body">
+    <div class="body">
+      <h1>Clone gig</h1>
+      <p>
+        Are you sure you want to clone this gig?
+      </p>
+      <div class="form">
+        <form method="post">
+          <input type="hidden" name="id" value="%id%">
+          <input type="submit" name="clone" value="Clone">
+        </form>
+      </div>
+      <span class="close">Close</span>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="delete">
+  <div class="modal-body">
+    <div class="body">
+      <h1>Delete gig</h1>
+      <p>
+        Are you sure you want to delete this gig?
+      </p>
+      <div class="form">
+        <form method="post">
+          <input type="hidden" name="id" value="%id%">
+          <input type="submit" name="delete" value="Delete">
+        </form>
+      </div>
+      <span class="close">Close</span>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="changePoster">
+  <div class="modal-body">
+    <div class="body">
+      <h1>Change poster</h1>
+      <p>
+        File must be JPG, JPEG, PNG or GIF at maximum 500kB. Suggested resolution is 450x632.
+      </p>
+      <div class="form">
+        <form method="post" enctype="multipart/form-data">
+          <input type="file" name="poster">
+          <input type="hidden" name="id" value="%id%">
+          <input type="submit" name="changePoster" value="Change poster">
+        </form>
+      </div>
+      <span class="close">Close</span>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="deletePoster">
+  <div class="modal-body">
+    <div class="body">
+      <h1>Delete poster</h1>
+      <p>
+        Are you sure you want to delete this poster?</br>
+        Default poster will be set for this gig.
+      </p>
+      <div class="form">
+        <form method="post">
+          <input type="hidden" name="id" value="%id%">
+          <input type="hidden" name="filepath" value="%filepath%">
+          <input type="submit" name="deletePoster" value="Delete poster">
+        </form>
+      </div>
+      <span class="close">Close</span>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="changePromoter">
+  <div class="modal-body">
+    <div class="body">
+      <h1>Change promoter</h1>
+      <div class="form">
+        <form method="post">
+          <input type="text" readonly value="%promoter_name% (%promoter_company%)" name="selectedPromoter" class="selected">
+          <input type="text" placeholder="Search promoter..." class="select-promoter">
+          <p class="promoters-hint"></p>
+          <input type="hidden" name="promoter" value="%promoter_id%">
+          <input type="hidden" name="id" value="%id%">
+          <input type="submit" name="changePromoter" value="Change promoter">
+        </form>
+      </div>
+      <span class="close">Close</span>
+    </div>
+  </div>
+</div>

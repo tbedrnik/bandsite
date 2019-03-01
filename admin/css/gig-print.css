@@ -1,0 +1,56 @@
+body {
+  background-color: #fff;
+  color: #000;
+  display: block;
+  font-family: sans-serif;
+}
+div.menu {
+  display: none;
+}
+div.wrapper {
+
+}
+div.content {
+
+}
+.modal {
+  display: none;
+}
+a.delete, a.clone, a.changePromoter, a.changePoster, a.deletePoster {
+  display: none;
+}
+table#social, table#poster {
+  display: none;
+}
+iframe {
+  border: 0;
+}
+textarea {
+  font-family: sans-serif;
+  border: 0;
+  resize: none;
+}
+table {
+  border: 1px solid #aaa;
+  margin: 2px;
+  display: block;
+  display: inline-block;
+  box-sizing: border-box;
+}
+table#poster {
+  border: 0;
+}
+table#poster thead {
+  display: none;
+}
+iframe {
+  width: 100%;
+  height: 100mm;
+}
+div.cols {
+  display: block !important;
+  width: 100%;
+}
+div.col {
+  display: block;
+}

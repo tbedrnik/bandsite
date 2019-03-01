@@ -1,0 +1,22 @@
+.noselect() {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.background-image-overlay(@color, @image) {
+  background: -webkit-linear-gradient(fade(@color,80%), fade(@color,80%)), url(@image);
+  background: -moz-linear-gradient(fade(@color,80%), fade(@color,80%)), url(@image);
+  background: -o-linear-gradient(fade(@color,80%), fade(@color,80%)), url(@image);
+  background: linear-gradient(fade(@color,80%), fade(@color,80%)), url(@image);
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}

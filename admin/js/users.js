@@ -1,0 +1,11 @@
+$(document).ready(function(){
+  $(".new-user").click(function(){
+    $(".modal#new-user").fadeIn();
+  });
+  $(".change-password").click(function(){
+    $(".modal#change-password").fadeIn();
+  });
+  $(".delete-account").click(function(){
+    $(".modal#delete-account").fadeIn();
+  });
+});

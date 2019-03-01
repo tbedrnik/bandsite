@@ -1,0 +1,27 @@
+div.message {
+  width: calc(~'100% + 20px');
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0 -10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  font-weight: bold;
+  .box-shadow();
+
+  &.success {
+    background-color: #0df122;
+  }
+  &.error {
+    background-color: @red;
+  }
+
+  span.text {
+    color: @black;
+  }
+  span.close {
+    &:hover {
+      color: darken(@white,20%);
+      cursor: pointer;
+    }
+  }
+}
